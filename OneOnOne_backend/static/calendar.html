@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalendarComp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bg-primary text-white text-center py-4">
+    <h1 class="display-4">1on1</h1>
+    <h2 class="italic">Schedule Your 1:1 Meetings</h2>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="calendar.html">CalendarComp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="invite.html">Invite</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Contacts</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signin.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container py-4">
+    <div class="calendar">
+        <div class="calendar-header">January 2024</div>
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+        <div class="day not-month">31</div>
+        <div class="day">1</div>
+        <div class="day meeting-old">2</div>
+        <div class="day">3</div>
+        <div class="day meeting">4</div>
+        <div class="day meeting-conflict">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day meeting-unfinalised">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day meeting">12</div>
+        <div class="day">13</div>
+        <div class="day meeting-issue">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+        <div class="day">31</div>
+        <div class="day not-month">1</div>
+        <div class="day not-month">2</div>
+        <div class="day not-month">3</div>
+    </div>
+    <br>
+    <h3>Upcoming Meetings</h3>
+    <ul>
+        <li>January 4 - 12:00PM to 2:00PM</li>
+        <li>January 12 - 2:00PM to 3:30PM</li>
+    </ul>
+
+    <h3>Unfinalised Meetings</h3>
+    <ul>
+        <li>January 8 - 6:00PM to 9:30PM</li>
+    </ul>
+
+    <h3>Meeting Issues</h3>
+    <ul>
+        <li>January 14 - 12:00PM to 3:30PM</li>
+    </ul>
+
+    <h3>Meeting Conflicts</h3>
+    <ul>
+        <li>January 5 - 10:00AM to 1:30PM</li>
+    </ul>
+
+    <h3>Edit Meetings</h3>
+    <form>
+        <label for="meetingDate">Meeting Date:</label>
+        <input type="date" id="meetingDate" name="meetingDate" required>
+
+        <label for="meetingTime">Meeting Time:</label>
+        <input type="time" id="meetingTime" name="meetingTime" required>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+    <br>
+    <button class="btn btn-secondary">Export to Google CalendarComp</button>
+</main>
+
+</body>
+</html>

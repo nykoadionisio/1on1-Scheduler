@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="bg-primary text-white text-center py-4">
+    <h1 class="display-4">1on1</h1>
+    <h2 class="italic">Schedule Your 1:1 Meetings</h2>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calendar.html">CalendarComp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="invite.html">Invite</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="contacts.html">Contacts</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signin.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5 mb-5">
+    <h3 class="mb-4">Add Contacts</h3>
+  
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Add Contact</button>
+    </form>
+
+    <div class="row existing-contacts">
+        <div class="col-md-6">
+          <h2>Existing Contacts</h2>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              John Doe
+              <span class="badge badge-success availability">Available</span>
+              <button class="btn btn-warning">Remind</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Jane Smith
+              <span class="badge badge-warning availability">Not Set</span>
+              <button class="btn btn-warning">Remind</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  </body>
+  </html>

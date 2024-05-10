@@ -1,0 +1,84 @@
+/* style.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.calendar {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.day {
+    width: 14.28%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.not-month{
+    color: lightgray;
+}
+
+.meeting {
+    background-color: #5cb85c;
+    color: #fff;
+    font-weight: bold;
+}
+
+.meeting-issue {
+    background-color: #efd722;
+    color: #fff;
+    font-weight: bold;
+}
+
+.meeting-conflict {
+    background-color: #ef2222;
+    color: #fff;
+    font-weight: bold;
+}
+
+.meeting-old{
+    background-color: #b7b6b6;
+    color: #fff;
+    font-weight: bold;
+}
+
+.meeting-unfinalised {
+    background-color: #3799f6;
+    color: #fff;
+    font-weight: bold;
+}
+
+.existing-contacts {
+    padding: 40px 0;
+}

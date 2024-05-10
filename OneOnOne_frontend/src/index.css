@@ -1,0 +1,870 @@
+/* Color Scheme */
+:root {
+    --primary-color: #3498db; /* Primary blue */
+    --secondary-color: #5cb85c; /* Secondary green */
+    --alert-color: #ef2222; /* Alert red */
+    --warning-color: #efd722; /* Warning yellow */
+    --neutral-light: #ddd; /* Neutral light */
+    --neutral-dark: #333; /* Neutral dark */
+    --font-color: #333; /* Primary font color */
+    --background-color: #f9f9f9; /* Background color */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 2.5rem; /* 48px */
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--neutral-dark);
+}
+
+/* Calendar styles */
+.calendar {
+    width: 100%;
+    border: 1px solid var(--neutral-light);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.625rem; /* 10px */
+    font-weight: bold;
+}
+
+.day {
+    width: 14.28%;
+    float: left;
+    padding: 0.625rem; /* 10px */
+    box-sizing: border-box;
+    border-right: 1px solid var(--neutral-light);
+    border-bottom: 1px solid var(--neutral-light);
+    text-align: center;
+}
+
+.not-month {
+    color: lightgray;
+}
+
+/* Meeting styles */
+.meeting {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.meeting-issue {
+    background-color: var(--warning-color);
+    color: white;
+    font-weight: bold;
+}
+
+.meeting-conflict {
+    background-color: var(--alert-color);
+    color: white;
+    font-weight: bold;
+}
+
+.meeting-old {
+    background-color: #b7b6b6;
+    color: white;
+    font-weight: bold;
+}
+
+.meeting-unfinalised {
+    background-color: #3799f6;
+    color: white;
+    font-weight: bold;
+}
+
+/* Contact styles */
+.existing-contacts {
+    padding: 40px 0;
+}
+
+/* Utility classes for margin and padding */
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.pt-1 { padding-top: 1rem; }
+.pb-1 { padding-bottom: 1rem; }
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+    .day, .calendar-header {
+        padding: 0.5rem; /* 8px */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjusts to a smaller size on mobile */
+    }
+}
+
+
+
+/*--------------------------HEADER------------------------------------------*/
+
+/* Header Styles */
+.header-container {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--primary-color); /* Ensure this matches your color scheme */
+    color: white; /* Adjust if necessary to fit your design */
+}
+
+.header-title {
+    font-size: 3rem; /* Adjust based on your design */
+    margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 0; /* Adjust spacing as needed */
+}
+
+/*----------------------------NAVBAR---------------------------------------*/
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.25rem 0;
+  }
+  
+  .navbar-links {
+    display: flex;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    background-color: darken(var(--primary-color), 10%);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-links {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      width: 100%;
+      display: none;
+    }
+  
+    .navbar-links a {
+      padding: 1rem;
+      border-bottom: 1px solid white;
+      text-align: center;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  /* Custom Navbar Styles */
+.navbar-nav {
+    margin: 0.5rem 0; /* Adjust top and bottom margin as needed */
+}
+
+.navbar-nav .nav-item {
+    margin: 0 0.5rem; /* Adds space between nav items */
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+}
+
+/* Responsive Navbar */
+@media (max-width: 992px) { /* Adjust based on your Bootstrap version */
+    .navbar-nav {
+        margin: 0;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        margin: 0; /* Remove margin for full-width on mobile */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: 0.75rem 1rem; /* More padding on mobile for easier clickability */
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Aligns the toggle button to the right */
+    }
+}
+
+/*-------------------------------------------INDEX-------------------------------------*/
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+.hero {
+    background-color: var(--primary-color); /* Adjust based on your color scheme */
+    color: white;
+}
+
+.hero-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.hero-subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.btn-hero {
+    background-color: var(--accent-color); /* Adjust based on your color scheme */
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Features Section Styles */
+.features {
+    background-color: #f8f9fa; /* Slightly off-white background for contrast */
+}
+
+.feature-items .feature {
+    padding: 2rem;
+    background: white;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature h2 {
+    color: var(--primary-color); /* Use the primary color for feature titles */
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+
+/*-----------------------------SIGNUP--------------------------------------*/
+
+  /* Sign Up Form Styles */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: var(--background-color); /* Based on your color scheme */
+}
+
+.signup-form {
+    width: 100%;
+    max-width: 500px; /* Adjust based on your preference */
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border-radius: 8px;
+}
+
+.form-title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color); /* Based on your color scheme */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border: 1px solid var(--neutral-light);
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color); /* Based on your color scheme */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+
+/* --------------------SIGNIN------------------------------ */
+
+/* Sign In Form Styles, mirroring the Sign Up form */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.signin-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.form-title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border: 1px solid var(--neutral-light);
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.signup-link {
+    color: var(--primary-color);
+}
+
+/*------------------------------PROFILE---------------------------------------------*/
+
+/* Profile View Styles */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the content is vertically centered in the viewport */
+    background-color: var(--background-color);
+}
+
+.profile-form {
+    width: 100%;
+    max-width: 600px; /* Adjust based on your layout */
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center; /* Center aligns the title and button */
+}
+
+.form-title {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.profile-details {
+    text-align: left; /* Ensures the details are aligned to the left */
+    margin-bottom: 1.5rem;
+}
+
+.profile-details p {
+    margin: 0.5rem 0; /* Adds spacing between details */
+    font-size: 1rem;
+}
+
+.btn-primary {
+    display: block;
+    width: auto; /* Allows the button to size according to its content */
+    padding: 0.75rem 2rem; /* More horizontal padding */
+    margin: auto; /* Centers the button in the container */
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+
+/*--------------------------------CONTACTS--------------------------------------------*/
+
+/* Contact Form Styles */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    /* background-color: var(--background-color); */
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.form-title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border: 1px solid var(--neutral-light);
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+
+/*-------------------------DASHBOARD-------------------------------------------*/
+
+/* Dashboard Summary Styles */
+.dashboard-summary {
+    padding: 2rem;
+    background-color: #f9f9fa; /* Slightly off-white background for a soft look */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   
+    /* flex: 1 */
+}
+
+.dashboard-title {
+    color: var(--primary-color); /* Adjust according to your theme */
+    margin-bottom: 1rem;
+}
+
+.dashboard-intro {
+    color: var(--text-color, #333); /* Fallback color if --text-color is not defined */
+    margin-bottom: 2rem;
+}
+
+.dashboard-card {
+    background-color: #fff; /* Keep it clean and simple */
+    border: 1px solid #eaeaea; /* Subtle border */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    padding: 20px; /* Increased padding for better spacing */
+    margin-bottom: 16px; /* Consistent margin for separation */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.dashboard-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Slightly deeper shadow on hover for interactivity */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Larger size for titles */
+    font-weight: 600; /* Bolder weight for titles */
+    color: #333; /* Darker color for better contrast */
+    margin-bottom: 12px; /* Space between title and text */
+}
+
+.card-text {
+    font-size: 1rem; /* Standard size for body text */
+    color: #666; /* Lighter color for body text */
+}
+
+/*-------------------------------------INVITE-------------------------------------------------*/
+
+/* Invite Form Styles */
+.invite-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.invite-form {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border: 1px solid var(--neutral-light);
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.form-check-label {
+    margin-left: 0.5rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/*--------------------------------------CALENDER---------------------------------------------------------*/
+
+/* Container for the entire calendar component */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for the availability calendar */
+.availability-calendar {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the calendar section */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.availability-calendar h3 {
+    margin-bottom: 15px;
+    color: #333; /* Dark text for contrast */
+    font-size: 1.25rem; /* Adjust based on your design */
+}
+
+/* React Calendar default styles customization */
+.react-calendar {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't overflow its container */
+    background-color: #fff;
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Match the container's border radius */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for some depth */
+}
+
+.react-calendar__tile {
+    max-height: 100px; /* Adjust tile size */
+    padding: 10px; /* Padding inside each date tile */
+    background-color: #fff; /* Background of date tiles */
+    border-radius: 5px; /* Rounded corners for tiles */
+    font-size: 0.85rem; /* Adjust font size as needed */
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+    background-color: #e0e0e0; /* Hover and focus state */
+}
+
+.react-calendar__tile--active {
+    background-color: #007bff; /* Active date tile background color */
+    color: white; /* Active date tile text color */
+}
+
+/* Style adjustments for selected range */
+.react-calendar__tile--range {
+    background-color: #007bff; /* Background color for range selection */
+    color: white; /* Text color for range selection */
+}
+
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd {
+    background-color: #0056b3; /* Darker background color for range start and end */
+}
+
+/* Calendar Component Styles */
+.calendar-comp {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.calendar-title {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.meeting-list {
+    list-style: none;
+    padding: 0;
+}
+
+.meeting-item {
+    background-color: var(--light-background); /* Light shade from your color scheme */
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    color: var(--text-color); /* A variable representing your preferred text color */
+}
+
+.meeting-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Edit Meetings Styles */
+.edit-meetings-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.edit-meetings-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid var(--neutral-light);
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* Meetings Info Styles */
+.meetings-info-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.meetings-section {
+    margin-bottom: 2rem;
+}
+
+.meetings-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.meetings-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.meeting-item {
+    background-color: var(--light-background); /* Light shade from your color scheme */
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meeting-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Calendar Page Styles */
+.calendar-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.export-btn-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-export {
+    background-color: var(--primary-color); /* Your primary color */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-export:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/*-------------------------------------------FOOTER----------------------------------------------------*/
+
+.app-footer {
+    padding: 1rem 0;
+    background-color: var(--primary-color); /* Use the primary color of your theme */
+    color: white; /* Ensure text color contrasts well with the background */
+    border-top: 1px solid var(--neutral-dark); /* Optional: Use a secondary color for a visual accent */
+}
+
+.app-footer .container p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------------------*/
